@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no"
+    />
+    <title>TURION Cadastro de Usuário</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.16/jquery.mask.min.js"></script>
+  </head>
+  <body>
+    <div class="container">
+      <div class="container-form">
+        <div class="image-container">
+          <img
+            src="https://turion.berlan.com.br/images/novos_logos_turion/turion-logo.svg"
+            alt="Turion Analysis System Logo"
+            width="200"
+            height="200"
+          />
+        </div>
+        <h2>Cadastro de Usuário</h2>
+        <form id="userForm">
+          <label for="name">Nome:</label>
+          <input type="text" id="name" required />
+          <label for="cellphone">Celular:</label>
+          <input
+            type="text"
+            id="cellphone"
+            placeholder="(00) 00000-0000"
+            required
+            maxlength="15"
+          />
+          <label for="department">Departamento:</label>
+          <select id="department" required>
+            <option value="">Selecione...</option>
+            <option value="Administrativo">Administrativo</option>
+            <option value="Financeiro">Financeiro</option>
+            <option value="Compras">Compras</option>
+            <option value="Faturamento">Faturamento</option>
+          </select>
+          <label for="email">E-mail:</label>
+          <input type="email" id="email" required />
+          <label for="password">Senha:</label>
+          <input
+            type="password"
+            id="password"
+            required
+            pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*\W).{8,}"
+            title="A senha deve conter pelo menos 8 caracteres, incluindo pelo menos uma letra maiúscula, uma letra minúscula, um número e um caractere especial."
+          />
+          <div class="password-container">
+            <span class="obs-icon">
+              Problemas com a senha?
+              <img
+                src="https://www.svgrepo.com/show/506288/question-circle.svg"
+                alt="Question Icon"
+                width="16"
+                height="16"
+              />
+              <span class="obs-text"
+                >A senha deve conter pelo menos 8 caracteres, incluindo pelo
+                menos uma letra maiúscula, uma letra minúscula, um número e um
+                caractere especial.</span
+              >
+            </span>
+          </div>
+          <button type="submit">Cadastrar</button>
+        </form>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
