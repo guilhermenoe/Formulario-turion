@@ -89,6 +89,8 @@ body {
     transform: translateY(-50%);
     margin-bottom: 20px;
     cursor: pointer;
+    align-items: center;
+    gap: 5px;
   }
   
   .obs-text {
